@@ -1,16 +1,37 @@
-# Pomysły
+# Design
 
-- Rozrastanie systemu korzeni
-- Wybory pomiędzy zasobami
-- "Budowanie"
-- Styl bashowania Zdjęć z internetu
-- Poziomy jako zagadki
-- Ograniczona ilość korzeni
-  - Przynajmniej na start
-  - Można kupić kolejne korzenie
-  - Budynki Rosną z czasem ale tylko jak mają potrzebne zasoby.
-  - Zasobem jest czas
-  - Może jakaś mini gierka pomiędzy czekaniem typu:
-    - Przycinanie korzeni
-    - Zbieranie promieni słonecznych
-    - 
+## Mechaniki
+
+### Pole gry
+
+- 80% ziemi
+- losowy spawn zasobów na początku gry
+- losowy spawn kamieni
+- x-ray
+
+### Korzenie
+
+- ciągle rosną
+- gracz może nim sterować
+- gra zaczyna się z jednym
+- można dokupić kolejne korzenie (przez budynki)
+- można ulepszać ich prędkość (przez budynki)
+- zbierają zasoby
+
+### Zasoby
+
+- służą do ulepszenia korzeni (przez budynki)
+
+### Hazard
+
+- Korzenie potrzebują zasobu X
+- Przez pewien okres korzenie będą potrzebować Y więcej zasobów
+- Możesz usuwać  
+
+
+### Budynki
+
+
+# Korzeń architektura
+
+## Funkcje:
