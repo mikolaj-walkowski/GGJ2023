@@ -1,12 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://boj4dkqiy1u3v"]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource type="Script" path="res://Root/Root.gd" id="1_bi5ev"]
-[ext_resource type="Texture2D" uid="uid://bbqdvhtp3708s" path="res://Root/yes.png" id="2_f62oq"]
+[ext_resource path="res://root/root.gd" type="Script" id=1]
+[ext_resource path="res://root/yes.png" type="Texture" id=2]
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_bi5ev")
+[node name="Root" type="Node2D"]
+script = ExtResource( 1 )
 
-[node name="Yes" type="Sprite2D" parent="."]
-position = Vector2(3.00001, 5.00001)
-scale = Vector2(6.15217, 5.80435)
-texture = ExtResource("2_f62oq")
+[node name="Yes" type="Sprite" parent="."]
+scale = Vector2( 3, 3 )
+texture = ExtResource( 2 )

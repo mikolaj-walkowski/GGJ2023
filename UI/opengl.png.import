@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vulkanServer.png-692e4ccce738b086b5265e3b93611b2c.stex"
+path="res://.import/opengl.png-47fb951be28e7554e47967017b605192.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BG/vulkanServer.png"
-dest_files=[ "res://.import/vulkanServer.png-692e4ccce738b086b5265e3b93611b2c.stex" ]
+source_file="res://UI/opengl.png"
+dest_files=[ "res://.import/opengl.png-47fb951be28e7554e47967017b605192.stex" ]
 
 [params]
 
