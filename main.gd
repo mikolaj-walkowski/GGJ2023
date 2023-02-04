@@ -8,11 +8,6 @@ enum RootNames{
 	RES_B
 }
 
-var Roots = {
-	RootNames.ROAD : preload("res://root/Road/Road.tscn"),
-	RootNames.TOWN : preload("res://root/Town/Town.tscn"),
-}
-
 var rootV2 = preload("res://RootV2/RootV2.tscn")
 
 # Called when the node enters the scene tree for the first time.
