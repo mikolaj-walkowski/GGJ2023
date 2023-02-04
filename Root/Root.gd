@@ -1,36 +1,33 @@
 class_name Root
 extends Node2D
 
-var tiletex = {
-	"Town" : preload("res://Assets/Town.png"),
-	"Res_A" : preload("res://Assets/Res_A.png"),
-	"Res_B" : preload("res://Assets/Res_B.png"),
-	"Road" : preload("res://Assets/Road.png"),
-	"Null" : preload("res://Assets/Road.png"),
-	}
+enum TileTypes{
+	TOWN,
+	RES_A,
+	RES_B,
+	ROAD,
+	NULL
+}
+
+#var tiletex = {
+#	"Town" : preload("res://Assets/Town.png"),
+#	"Res_A" : preload("res://Assets/Res_A.png"),
+#	"Res_B" : preload("res://Assets/Res_B.png"),
+#	"Road" : preload("res://Assets/Road.png"),
+#	"Null" : preload("res://Assets/Null.png"),
+#	}
 
 
-var parent : Root
-var distance : float
-var children : Root 
-onready var sprite = $Sprite
-onready var road = $Line2D
+var texture : Texture = preload("res://Assets/Null.png")
 
-func init(pos : Vector2, p : Root):
-	parent = p
-	position = pos
-	distance = position.distance_to(parent.position)
-	drawRoad()
+func init():
+	pass
 
-func drawRoad():
-	var delta = parent.position - position
-	var alpha = asin(delta.x / delta.length())
-	road.set_rotation(alpha)
-	road.set_position((parent.position - position)/2)
-	road.set_texture(tiletex["Null"])
+func showUI():
+	pass
 
 func _ready():
-	pass # Replace with function body.
+	pass 
 
-func _process(delta):
+func input(event):
 	pass

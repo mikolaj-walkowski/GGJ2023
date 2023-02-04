@@ -13,15 +13,18 @@ var Roots = {
 	RootNames.TOWN : preload("res://root/Town/Town.tscn"),
 }
 
+var rootV2 = preload("res://RootV2/RootV2.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var root = Roots[RootNames.TOWN].instance()
+	var root = rootV2.instance()
 	add_child(root)
-	root.init(Vector2(0,0),null)
-	var road = Roots[RootNames.ROAD].instance()
+	root.init(Vector2(0,0),null, Root.TileTypes.TOWN)
+	var road = rootV2.instance()
 	add_child(road)
 	road.init(Vector2(200, 200), root)
 	generate_tree(7)
+	road.init(Vector2(200, 200), root, Root.TileTypes.ROAD)
 	pass # Replace with function body.
 	
 

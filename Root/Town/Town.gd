@@ -1,9 +1,9 @@
 extends Root
-func init(pos : Vector2, p : Root):
-	position = pos
-	distance = 0
-	print(sprite)
-	sprite.set_texture(tiletex["Town"])
+#func init(pos : Vector2, p : Root):
+#	position = pos
+##	distance = 0
+#	print(sprite)
+#	sprite.set_texture(tiletex["Town"])
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
