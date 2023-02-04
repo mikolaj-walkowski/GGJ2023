@@ -20,5 +20,5 @@ func _ready():
 	root.init(Vector2(0,0),null)
 	var road = Roots[RootNames.ROAD].instance()
 	add_child(road)
-	road.init(Vector2(200, 0), root)
+	road.init(Vector2(200, 200), root)
 	pass # Replace with function body.

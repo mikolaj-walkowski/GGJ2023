@@ -20,13 +20,14 @@ func init(pos : Vector2, p : Root):
 	parent = p
 	position = pos
 	distance = position.distance_to(parent.position)
-	road.add_point(parent.position - position)
-	road.add_point(Vector2(0,0))
+	drawRoad()
 
 func drawRoad():
 	var delta = parent.position - position
 	var alpha = asin(delta.x / delta.length())
-	
+	road.set_rotation(alpha)
+	road.set_position((parent.position - position)/2)
+	road.set_texture(tiletex["Null"])
 
 func _ready():
 	pass # Replace with function body.
