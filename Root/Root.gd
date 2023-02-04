@@ -23,6 +23,10 @@ func init(pos : Vector2, p : Root):
 	road.add_point(parent.position - position)
 	road.add_point(Vector2(0,0))
 
+func drawRoad():
+	var delta = parent.position - position
+	var alpha = asin(delta.x / delta.length())
+	
 
 func _ready():
 	pass # Replace with function body.
