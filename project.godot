@@ -9,10 +9,10 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Node2D",
+"base": "Reference",
 "class": "Root",
 "language": "GDScript",
-"path": "res://root/root.gd"
+"path": "res://root/Root.gd"
 } ]
 _global_script_class_icons={
 "Root": ""
