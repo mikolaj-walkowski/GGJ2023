@@ -17,7 +17,6 @@ func _ready():
 	root.init(Vector2(0,0),null, Root.TileTypes.TOWN)
 	var road = rootV2.instance()
 	add_child(road)
-	road.init(Vector2(200, 200), root)
 	generate_tree(7)
 	road.init(Vector2(200, 200), root, Root.TileTypes.ROAD)
 	pass # Replace with function body.
