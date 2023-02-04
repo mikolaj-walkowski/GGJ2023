@@ -7,5 +7,4 @@ func _ready():
 	for type in CityManager.ResourceType:
 		var display = resDisp.instance()
 		hbox.add_child(display)
-		print(type)
 		display.setResource(CityManager.ResourceType[type])

@@ -9,6 +9,7 @@ script = ExtResource( 4 )
 
 [node name="BG" parent="." instance=ExtResource( 1 )]
 position = Vector2( 57, -134 )
+z_index = -2
 
 [node name="Node2D" type="RemoteTransform2D" parent="."]
 position = Vector2( 57, -134 )
