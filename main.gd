@@ -42,7 +42,10 @@ func generate_tree(n: int):
 func generate_coordinates(edges):
 	
 	for edge in edges:
-		pass
+		var position = Vector2(rand_range(0, 200), rand_range(0,200))
+		#var new_node = rootV2.init(position, )
+		#the fuck jak mam podawac dzieci do tego rootv2
+		
 		
 func get_tree_edges(prufer: Array, m: int):
 	var vertices = m + 2
