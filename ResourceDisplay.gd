@@ -14,8 +14,8 @@ func _ready():
 	pass # Replace with function body.
 
 func updateValues():
-	maxLabel.text = str(CityManager.Resources[type].maxCount)
-	currLabel.text = str(CityManager.Resources[type].currentCount)
+	maxLabel.text = str(CityManager.Resources[type].maxCount as int)
+	currLabel.text = str(CityManager.Resources[type].currentCount as int)
 
 func setResource(t):
 	tex.set_texture(textures[t])
