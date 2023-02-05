@@ -1,14 +1,33 @@
+class_name Root
 extends Node2D
 
-var type = CityManager.road_types.NULL;
+enum TileTypes{
+	TOWN,
+	RES_A,
+	RES_B,
+	ROAD,
+	NULL
+}
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+#var tiletex = {
+#	"Town" : preload("res://Assets/Town.png"),
+#	"Res_A" : preload("res://Assets/Res_A.png"),
+#	"Res_B" : preload("res://Assets/Res_B.png"),
+#	"Road" : preload("res://Assets/Road.png"),
+#	"Null" : preload("res://Assets/Null.png"),
+#	}
 
-func build():
+
+var texture : Texture = preload("res://Assets/Null.png")
+
+func init():
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func showUI():
+	pass
+
+func _ready():
+	pass 
+
+func input(event):
 	pass

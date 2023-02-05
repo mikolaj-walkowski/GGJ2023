@@ -6,20 +6,41 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=5
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "Root",
+"language": "GDScript",
+"path": "res://root/Root.gd"
+} ]
+_global_script_class_icons={
+"Root": ""
+}
 
 [application]
 
 config/name="GraBezNazwy"
 run/main_scene="res://main.tscn"
-config/features=PackedStringArray("4.0", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
-CityManager="*res://CityManager/CityManager.tscn"
-TreeGenerator="*res://TreeGenerator.gd"
+CityManager="*res://Single/CityManager.gd"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
+environment/default_environment="res://default_env.tres"

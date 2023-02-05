@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vulkanServer.png-692e4ccce738b086b5265e3b93611b2c.stex"
+path="res://.import/Res_A.png-c97ab9bc2a44467421dd5d165ddcab13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BG/vulkanServer.png"
-dest_files=[ "res://.import/vulkanServer.png-692e4ccce738b086b5265e3b93611b2c.stex" ]
+source_file="res://Assets/Res_A.png"
+dest_files=[ "res://.import/Res_A.png-c97ab9bc2a44467421dd5d165ddcab13.stex" ]
 
 [params]
 
