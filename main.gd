@@ -36,15 +36,14 @@ func generate_tree(n: int):
 	var edges = get_tree_edges(arr, length)
 	edges.sort_custom(self, "custom_sort")
 	print(edges)
+	layout_tree(edges)
 	
-	#tree_nodes = generate_coordinates(edges)
-	
-func generate_coordinates(edges):
-	
-	for edge in edges:
-		var position = Vector2(rand_range(0, 200), rand_range(0,200))
-		#var new_node = rootV2.init(position, )
-		#the fuck jak mam podawac dzieci do tego rootv2
+func layout_tree(edges):
+	print(edges)
+	var stdout = []
+	var exit = OS.execute("python3", ["graph_layout.py", ], true, stdout)
+	if exit == OK:
+		print(stdout)
 		
 		
 func get_tree_edges(prufer: Array, m: int):
@@ -63,9 +62,6 @@ func get_tree_edges(prufer: Array, m: int):
 		for j in range(vertices): 
 			jw = j
 			if (vertex_set[j] == 0):
-				 
-				# Remove from Prufer set and print
-				# pair.
 				vertex_set[j] = -1
 				edges.append(Vector2(j+1, prufer[i]))
 				vertex_set[prufer[i] - 1] -= 1
@@ -74,7 +70,6 @@ func get_tree_edges(prufer: Array, m: int):
 	jw = 0
 	var dupa_romana = 0
 	var zupa_romana = 0
-	# For the last element
 	for i in range(vertices):
 		if (vertex_set[i] == 0 and jw == 0):
 			dupa_romana = i +1
@@ -83,4 +78,3 @@ func get_tree_edges(prufer: Array, m: int):
 			zupa_romana = i + 1
 	edges.append(Vector2(dupa_romana, zupa_romana))
 	return edges
-	
