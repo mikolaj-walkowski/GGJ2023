@@ -39,7 +39,7 @@ func generate_tree(n: int):
 	layout_tree(edges)
 	
 func layout_tree(edges):
-	print(edges)
+	#print(edges)
 	var stdout = []
 	var exit = OS.execute("python3", ["graph_layout.py", ], true, stdout)
 	if exit == OK:
