@@ -1,6 +1,5 @@
 extends Node2D
 
-
 onready var states = {
 	Root.TileTypes.NULL : $Null,
 	Root.TileTypes.RES_A : $Res_A,

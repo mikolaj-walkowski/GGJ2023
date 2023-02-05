@@ -1,13 +1,5 @@
 extends Node
 
-enum RootNames{
-	TOWN,
-	NULL,
-	ROAD,
-	RES_A,
-	RES_B
-}
-
 var rootV2 = preload("res://RootV2/RootV2.tscn")
 
 # Called when the node enters the scene tree for the first time.
@@ -39,7 +31,9 @@ func generate_tree(n: int):
 	
 	for i in range(n):
 		var selected_node = edges[i][1]
-		var new_node = rootV2.init(Vector2(layout[selected_node]), i)
+		var new_node = rootV2.instance()
+		add_child(new_node)
+		new_node.init(Vector2(layout[selected_node]), i, Root.TileTypes.ROAD)
 	
 func array_to_string(arr: Array) -> String:
 	var s = ""
