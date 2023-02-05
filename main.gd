@@ -35,15 +35,25 @@ func generate_tree(n: int):
 		arr[i] = rng.randi_range(1, length+1)
 	var edges = get_tree_edges(arr, length)
 	edges.sort_custom(self, "custom_sort")
-	print(edges)
 	layout_tree(edges)
 	
+func array_to_string(arr: Array) -> String:
+	var s = ""
+	for i in arr:
+		s += " " + String(i.x) + " " + String(i.y)
+	return s
+	
 func layout_tree(edges):
-	#print(edges)
+	print(edges)
+	var string_edges = array_to_string(edges)
+	print(string_edges)
 	var stdout = []
-	var exit = OS.execute("python3", ["graph_layout.py", ], true, stdout)
+	var exit = OS.execute("python3", ["graph_layout.py", string_edges], true, stdout)
 	if exit == OK:
 		print(stdout)
+	else:
+		print("Python error occured")
+		
 		
 		
 func get_tree_edges(prufer: Array, m: int):
