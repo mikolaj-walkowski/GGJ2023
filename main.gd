@@ -35,7 +35,11 @@ func generate_tree(n: int):
 		arr[i] = rng.randi_range(1, length+1)
 	var edges = get_tree_edges(arr, length)
 	edges.sort_custom(self, "custom_sort")
-	layout_tree(edges)
+	var layout = layout_tree(edges)
+	
+	for i in range(n):
+		var selected_node = edges[i][1]
+		var new_node = rootV2.init(Vector2(layout[selected_node]), i)
 	
 func array_to_string(arr: Array) -> String:
 	var s = ""
@@ -43,16 +47,24 @@ func array_to_string(arr: Array) -> String:
 		s += " " + String(i.x) + " " + String(i.y)
 	return s
 	
+func load_layout():
+	var file = File.new()
+	file.open("res://layout.json", File.READ)
+	var data = parse_json(file.get_as_text())
+	return data
+	
 func layout_tree(edges):
 	print(edges)
 	var string_edges = array_to_string(edges)
 	print(string_edges)
 	var stdout = []
-	var exit = OS.execute("python3", ["graph_layout.py", string_edges], true, stdout)
+	var exit = OS.execute("python", ["graph_layout.py", "%s" % string_edges], true, stdout)
 	if exit == OK:
-		print(stdout)
+		var data = load_layout()
+		return data
 	else:
 		print("Python error occured")
+		return
 		
 		
 		
